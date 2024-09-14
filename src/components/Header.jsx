@@ -13,7 +13,7 @@ function Header({
     <header>
       <h1>CurrentList</h1>
 
-      <div className="input-container">
+      <div className="input-container grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 ">
         <Select
           onChange={handleWeatherChange}
           options={["hot-months", "cold-months", "shoulder-season"]}

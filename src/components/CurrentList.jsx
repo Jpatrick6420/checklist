@@ -1,7 +1,7 @@
 /*eslint react/prop-types: 0 */
 function CurrentList({ list, toggleChecked, state }) {
   return (
-    <ul className="checklist grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+    <ul className="checklist grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
       {Array.isArray(list) ? (
         list.map((item, idx) => {
           let amount;

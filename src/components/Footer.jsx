@@ -26,7 +26,7 @@ function Footer({ currentList }) {
 
   return (
     <footer>
-      <ul>
+      <ul className="flex justify-around border-t-2 border-gray-900 mt-4 pt-4">
         <li>
           <p className="text-yellow-500">Items Packed: {numPackedItems}</p>
         </li>
