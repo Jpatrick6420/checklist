@@ -43,6 +43,15 @@ function App() {
         };
       }
       case "change activity": {
+        console.log(action.payload);
+        if (action.payload === "none") {
+          return {
+            ...state,
+            kayaking: false,
+            biking: false,
+            currentActivityValue: action.payload,
+          };
+        }
         const isKayaking = action.payload === "kayaking";
         const isBiking = action.payload === "biking";
 

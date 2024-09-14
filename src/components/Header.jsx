@@ -24,7 +24,7 @@ function Header({
         />
         <Select
           onChange={handleActivityChange}
-          options={["biking", "kayaking", "none"]}
+          options={["none", "biking", "kayaking"]}
           id="activity-change-input"
           label="activity"
           value={currentListOptions.currentActivityValue}
