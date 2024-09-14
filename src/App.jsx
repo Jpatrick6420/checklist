@@ -4,6 +4,7 @@ import Header from "./components/Header";
 import CurrentList from "./components/CurrentList";
 import { handleActiveListChange } from "./data/listData";
 import { initialState } from "./utilities/utilities";
+import Footer from "./components/Footer";
 
 function App() {
   function itemsReducer(state, action) {
@@ -135,6 +136,7 @@ function App() {
         dispatch={dispatch}
         state={state}
       />
+      <Footer currentList={state.currentList} />
     </>
   );
 }
