@@ -28,7 +28,7 @@ function Footer({ currentList }) {
     <footer>
       <ul>
         <li>
-          <p>Items Packed: {numPackedItems}</p>
+          <p className="text-yellow-500">Items Packed: {numPackedItems}</p>
         </li>
         <li>
           <p>Items left: {itemsLeftToPack}</p>

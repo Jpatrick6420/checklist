@@ -2,8 +2,8 @@
 import { formatName } from "../utilities/utilities";
 function Select({ onChange, options, id, label, value }) {
   return (
-    <div className="select-container">
-      <label style={{ color: "white" }}>{label}</label>
+    <div className="select-container border-b-2 ">
+      <label className="text-gray-800">{label}</label>
 
       <select
         id={id}

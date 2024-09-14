@@ -130,7 +130,7 @@ function App() {
   );
   // console.log(state.currentList);
   return (
-    <>
+    <section className="grid min-h-[100dvh] grid-rows-[auto_1fr_auto">
       <Header
         handleActivityChange={handleActivityChange}
         handleWeatherChange={handleWeatherChange}
@@ -146,7 +146,7 @@ function App() {
         state={state}
       />
       <Footer currentList={state.currentList} />
-    </>
+    </section>
   );
 }
 
