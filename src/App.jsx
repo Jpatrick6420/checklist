@@ -67,9 +67,11 @@ function App() {
 
         return {
           ...state,
-          currentList: state.currentList.map((item, i) =>
-            i === idx ? { ...item, packed: !item.packed } : item
-          ),
+          currentList: state.currentList
+            .map((item, i) =>
+              i === idx ? { ...item, packed: !item.packed } : item
+            )
+            .sort((a, b) => a.packed - b.packed),
         };
       }
       case "handle active change list": {

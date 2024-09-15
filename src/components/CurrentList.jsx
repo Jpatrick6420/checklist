@@ -34,13 +34,15 @@ function CurrentList({ list, toggleChecked, state }) {
               Number(state.numOfPeople) *
               Number(state.duration);
           }
-
+          const itemStyles = item.packed
+            ? "line-through text-left text-red-500"
+            : "text-left";
           return (
             <li
               key={item.id}
               className="item-checklist grid grid-cols-[2fr_1fr] "
             >
-              <p className="text-left">
+              <p className={itemStyles}>
                 {amount} {item.name === "water" ? "Gal" : ""} {item.name}
               </p>
               <input
