@@ -12,10 +12,7 @@ function CurrentList({ list, toggleChecked, state }) {
             item.name !== "bike water bottles"
           ) {
             amount = Math.ceil(
-              item.quantity *
-                state.numOfPeople *
-                state.duration *
-                (state.clothingMultiplier || 1)
+              item.quantity * state.duration * (state.clothingMultiplier || 1)
             );
           }
           if (item.quantity === 1 && item.name !== "water") {
