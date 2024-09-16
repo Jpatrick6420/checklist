@@ -1,4 +1,6 @@
 /*eslint react/prop-types: 0 */
+import PropTypes from "prop-types";
+
 function CurrentList({ list, toggleChecked, state }) {
   return (
     <ul className="checklist grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
@@ -57,5 +59,9 @@ function CurrentList({ list, toggleChecked, state }) {
     </ul>
   );
 }
+
+CurrentList.PropTypes = {
+  list: PropTypes.array,
+};
 
 export default CurrentList;

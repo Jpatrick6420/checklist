@@ -9,9 +9,16 @@ function Header({
   handleDurationChange,
   dispatch,
 }) {
+  let activity =
+    currentListOptions.currentActivityValue === "none"
+      ? ""
+      : currentListOptions.currentActivityValue;
   return (
     <header>
-      <h1>CurrentList</h1>
+      <h1>
+        {currentListOptions.currentWeatherValue.split("-").join(" ")}{" "}
+        {activity === "" ? "" : "&"} {activity} list{activity === "" ? "" : "s"}
+      </h1>
 
       <div className="input-container grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 ">
         <Select

@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import PropTypes from "prop-types";
 
 function Footer({ currentList }) {
   const [numPackedItems, setNumPackedItems] = useState(0);
@@ -38,4 +39,7 @@ function Footer({ currentList }) {
   );
 }
 
+Footer.propTypes = {
+  currentList: PropTypes.array,
+};
 export default Footer;
