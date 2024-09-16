@@ -15,7 +15,7 @@ function Header({
       : currentListOptions.currentActivityValue;
   return (
     <header>
-      <h1>
+      <h1 className="mb-4 font-semibold">
         {currentListOptions.currentWeatherValue.split("-").join(" ")}{" "}
         {activity === "" ? "" : "&"} {activity} list{activity === "" ? "" : "s"}
       </h1>

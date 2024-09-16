@@ -28,7 +28,7 @@ export const initialState = {
   duration: "1",
   currentList: [...hotMonthsList, ...bikingList],
   currentWeatherValue: "hot-months",
-  currentActivityValue: "biking",
+  currentActivityValue: "none",
   hotMonthsList: hotMonthsList,
   coldMonthsList: coldMonthsList,
   shoulderList: shoulderSeasonList,

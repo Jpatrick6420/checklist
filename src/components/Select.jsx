@@ -2,8 +2,8 @@
 import { formatName } from "../utilities/utilities";
 function Select({ onChange, options, id, label, value }) {
   return (
-    <div className="select-container border-b-2 flex justify-between items-center ">
-      <label className="text-gray-800">{label}</label>
+    <div className="select-container border-b-2 grid  grid-cols-2 my-2 ">
+      <label className="text-gray-800  font-semibold">{label}</label>
 
       <select
         id={id}
@@ -16,7 +16,7 @@ function Select({ onChange, options, id, label, value }) {
           const optionName = formatName(option);
 
           return (
-            <option key={option} value={option}>
+            <option className="text-center" key={option} value={option}>
               {optionName}
             </option>
           );

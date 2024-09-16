@@ -34,12 +34,12 @@ function CurrentList({ list, toggleChecked, state }) {
               Number(state.duration);
           }
           const itemStyles = item.packed
-            ? "line-through text-left text-red-500"
-            : "text-left";
+            ? "line-through text-left text-red-500 font-bold"
+            : "text-left mr-2 font-bold";
           return (
             <li
               key={item.id}
-              className="item-checklist grid grid-cols-[2fr_1fr] "
+              className=" flex items-center justify-between hover:bg-blue-600 hover:text-stone-50 rounded-md py-2 px-4"
             >
               <p className={itemStyles}>
                 {amount} {item.name === "water" ? "Gal" : ""} {item.name}
