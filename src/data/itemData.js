@@ -351,6 +351,17 @@ const items = [
     biking: false,
     kayaking: true,
   },
+  {
+    id: 35,
+    name: "car level",
+    coldMonths: true,
+    hotMonths: true,
+    shoulderSeason: true,
+    packed: false,
+    quantity: 1,
+    biking: false,
+    kayaking: false,
+  },
 ];
 
 export { items };

@@ -60,7 +60,7 @@ function CurrentList({ list, toggleChecked, state }) {
   );
 }
 
-CurrentList.PropTypes = {
+CurrentList.propTypes = {
   list: PropTypes.array,
 };
 
