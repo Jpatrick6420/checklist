@@ -32,10 +32,11 @@ function FormInput({ label, type, value, field, onChange }) {
   }
 }
 
-// FormInput.propTypes = {
-//   label: PropTypes.string,
-//   type: PropTypes.string,
-//   value: PropTypes.string,
-//   field: PropTypes.string,
-// };
+FormInput.propTypes = {
+  label: PropTypes.string,
+  type: PropTypes.string,
+  value: PropTypes.oneOfType([PropTypes.string, PropTypes.bool]),
+  field: PropTypes.string,
+  onChange: PropTypes.func,
+};
 export default FormInput;

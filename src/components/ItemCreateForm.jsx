@@ -137,7 +137,7 @@ function ItemCreateForm() {
       <FormInput
         label="quantity"
         field="quantity"
-        value={newEntry.quantity}
+        value={newEntry.quantity.toString()}
         onChange={handleInputEntry}
         type="text"
       />
@@ -150,7 +150,7 @@ function ItemCreateForm() {
         </button>
         <button
           className="bg-red-500 hover:bg-red-400 hover:scale-105 active:scale-100 text-sm text-stone-50"
-          onClick={() => reset()}
+          onClick={() => document.querySelector("form").reset()}
         >
           Reset
         </button>
