@@ -91,9 +91,10 @@ function ItemCreateForm() {
     console.log(newEntry);
   };
   return (
-    <form>
+    <form className="bg-stone-200 rounded-lg px-6 py-4">
+      <h2 className="font-bold text-xl mb-6 underline ">New Item</h2>
       <FormInput
-        label="name"
+        label="Name"
         field="name"
         value={newEntry.name}
         onChange={handleInputEntry}
@@ -135,21 +136,21 @@ function ItemCreateForm() {
         type="checkbox"
       />
       <FormInput
-        label="quantity"
+        label="Quantity"
         field="quantity"
         value={newEntry.quantity.toString()}
         onChange={handleInputEntry}
         type="text"
       />
-      <div className="flex justify-center items-center gap-2">
+      <div className="flex justify-center items-center gap-2 mt-4">
         <button
           onClick={handleSubmit}
-          className="bg-blue-500 hover:bg-blue-400 hover:scale-105 active:scale-100 text-sm text-stone-50"
+          className="w-1/3 bg-blue-500 hover:bg-blue-400 hover:scale-105 active:scale-100 text-sm text-stone-50"
         >
           Submit
         </button>
         <button
-          className="bg-red-500 hover:bg-red-400 hover:scale-105 active:scale-100 text-sm text-stone-50"
+          className="w-1/3 bg-red-500 hover:bg-red-400 hover:scale-105 active:scale-100 text-sm text-stone-50"
           onClick={() => document.querySelector("form").reset()}
         >
           Reset

@@ -3,9 +3,9 @@ function FormInput({ label, type, value, field, onChange }) {
   if (type === "text") {
     return (
       <div className="grid grid-cols-2 my-1 ">
-        <label className="text-left">{label}</label>
+        <label className="text-left text-gray-900 font-semibold">{label}</label>
         <input
-          className="px-1 py-0.5 text-center"
+          className="px-1 py-0.5 text-center bg-white rounded-md"
           type="text"
           value={value}
           onChange={(e) => {
@@ -18,8 +18,9 @@ function FormInput({ label, type, value, field, onChange }) {
   if (type === "checkbox") {
     return (
       <div className="grid grid-cols-2 my-1 ">
-        <label className="text-left">{label}</label>
+        <label className="text-left text-gray-900 font-semibold">{label}</label>
         <input
+          className="text-blue-600"
           type="checkbox"
           value={value}
           onChange={(e) => {
