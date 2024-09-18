@@ -19,9 +19,9 @@ export const formatName = (name) => {
 export const initialState = {
   clothingMultiplier: 1,
   perishableMultiplier: 1,
-  coldList: false,
-  hotList: true,
-  shoulderSeasonList: false,
+  cold: false,
+  hot: true,
+  shoulderSeason: false,
   biking: false,
   kayaking: false,
   numOfPeople: "1",

@@ -549,6 +549,17 @@ const items = [
     biking: false,
     kayaking: false,
   },
+  {
+    id: 53,
+    name: "sleeping bag pump",
+    coldMonths: true,
+    hotMonths: true,
+    shoulderSeason: true,
+    packed: false,
+    quantity: 1,
+    biking: false,
+    kayaking: false,
+  },
 ];
 
 export { items };

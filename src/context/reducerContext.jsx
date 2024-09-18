@@ -33,14 +33,13 @@ function ItemsProvider({ children }) {
         return {
           ...state,
           currentList: selectedList,
-          hotList: hot,
-          coldList: cold,
-          shoulderSeasonList: shoulder,
+          hot: hot,
+          cold: cold,
+          shoulderSeason: shoulder,
           currentWeatherValue: action.payload,
         };
       }
       case "change activity": {
-        console.log(action.payload);
         if (action.payload === "none") {
           return {
             ...state,

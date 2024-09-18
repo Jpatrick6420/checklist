@@ -16,7 +16,7 @@ function Header() {
   let activity =
     state.currentActivityValue === "none" ? "" : state.currentActivityValue;
   return (
-    <header>
+    <header className="bg-gray-200 px-2 pt-4">
       <h1 className="mb-4 font-semibold">
         {state.currentWeatherValue.split("-").join(" ")}{" "}
         {activity === "" ? "" : "&"} {activity} list{activity === "" ? "" : "s"}

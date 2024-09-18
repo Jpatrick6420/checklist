@@ -2,8 +2,8 @@
 import { formatName } from "../utilities/utilities";
 function Select({ onChange, options, id, label, value }) {
   return (
-    <div className="select-container border-b-2 grid  grid-cols-2 my-2 items-center">
-      <label className="dark:text-stone-50 light:text-gray-900 font-semibold">
+    <div className="select-container border-b-2 border-gray-900 grid  grid-cols-2 my-2 items-center">
+      <label className="dark:text-stone-50 light:text-gray-900 font-semibold text-left pl-2">
         {label}
       </label>
 
