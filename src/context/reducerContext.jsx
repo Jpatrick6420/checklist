@@ -94,7 +94,6 @@ function ItemsProvider({ children }) {
   };
 
   const handleActivityChange = (value) => {
-    console.log("activity:", value);
     dispatch({ type: "change activity", payload: value });
   };
   const toggleChecked = (idx) => {

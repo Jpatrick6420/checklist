@@ -18,6 +18,7 @@ function Layout() {
       state.currentActivityValue,
       state.biking,
       state.kayaking,
+      dispatch,
     ]
   );
   return (
