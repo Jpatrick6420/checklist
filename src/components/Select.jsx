@@ -2,7 +2,7 @@
 import { formatName } from "../utilities/utilities";
 function Select({ onChange, options, id, label, value }) {
   return (
-    <div className="select-container border-b-2 grid  grid-cols-2 my-2 ">
+    <div className="select-container border-b-2 grid  grid-cols-2 my-2 items-center">
       <label className="text-stone-50 font-semibold">{label}</label>
 
       <select

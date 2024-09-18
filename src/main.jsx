@@ -5,6 +5,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import "./index.css";
 import Layout from "./components/Layout.jsx";
 import ItemCreateForm from "./components/ItemCreateForm.jsx";
+import { ItemsProvider } from "./context/reducerContext.jsx";
 
 const router = createBrowserRouter([
   { path: "/", element: <Layout /> },
@@ -13,6 +14,8 @@ const router = createBrowserRouter([
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
-    <RouterProvider router={router} />
+    <ItemsProvider>
+      <RouterProvider router={router} />
+    </ItemsProvider>
   </StrictMode>
 );

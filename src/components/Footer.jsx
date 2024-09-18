@@ -1,17 +1,19 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useContext } from "react";
 import PropTypes from "prop-types";
+import { ItemsContext } from "../context/reducerContext";
 
-function Footer({ currentList }) {
+function Footer() {
+  const { state } = useContext(ItemsContext);
   const [numPackedItems, setNumPackedItems] = useState(0);
   const [itemsLeftToPack, setItemsLeftToPack] = useState(0);
   const calculatePackedItems = () => {
-    const itemsPacked = currentList.reduce((acc, item) => {
+    const itemsPacked = state.currentList.reduce((acc, item) => {
       return item.packed ? acc + 1 : acc;
     }, 0);
     setNumPackedItems(itemsPacked);
   };
   const calculateItemsLeft = () => {
-    const itemsLeft = currentList.reduce((acc, item) => {
+    const itemsLeft = state.currentList.reduce((acc, item) => {
       return !item.packed ? acc + 1 : acc;
     }, 0);
     setItemsLeftToPack(itemsLeft);
@@ -22,7 +24,7 @@ function Footer({ currentList }) {
       calculatePackedItems();
       calculateItemsLeft();
     },
-    [currentList]
+    [state.currentList]
   );
 
   return (

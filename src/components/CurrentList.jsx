@@ -1,11 +1,15 @@
 /*eslint react/prop-types: 0 */
 import PropTypes from "prop-types";
+import { useContext } from "react";
+import { ItemsContext } from "../context/reducerContext";
 
-function CurrentList({ list, toggleChecked, state }) {
+function CurrentList() {
+  const { state, toggleChecked } = useContext(ItemsContext);
+
   return (
     <ul className="checklist grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
-      {Array.isArray(list) ? (
-        list.map((item, idx) => {
+      {Array.isArray(state.currentList) ? (
+        state.currentList.map((item, idx) => {
           let amount;
 
           if (

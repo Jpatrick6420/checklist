@@ -1,22 +1,24 @@
+import { ItemsContext } from "../context/reducerContext";
 import Select from "./Select";
+import { useContext } from "react";
 /*eslint react/prop-types: 0 */
 
-function Header({
-  handleWeatherChange,
-  handleActivityChange,
-  handleNumOfPeopleChange,
-  currentListOptions,
-  handleDurationChange,
-  dispatch,
-}) {
+function Header() {
+  const {
+    handleActivityChange,
+    handleNumOfPeopleChange,
+    handleDurationChange,
+    dispatch,
+    handleWeatherChange,
+    state,
+  } = useContext(ItemsContext);
+
   let activity =
-    currentListOptions.currentActivityValue === "none"
-      ? ""
-      : currentListOptions.currentActivityValue;
+    state.currentActivityValue === "none" ? "" : state.currentActivityValue;
   return (
     <header>
       <h1 className="mb-4 font-semibold">
-        {currentListOptions.currentWeatherValue.split("-").join(" ")}{" "}
+        {state.currentWeatherValue.split("-").join(" ")}{" "}
         {activity === "" ? "" : "&"} {activity} list{activity === "" ? "" : "s"}
       </h1>
 
@@ -26,7 +28,7 @@ function Header({
           options={["hot-months", "cold-months", "shoulder-season"]}
           id="weather-change-input"
           label="Weather"
-          value={currentListOptions.currentWeatherValue}
+          value={state.currentWeatherValue}
           dispatch={dispatch}
         />
         <Select
@@ -34,7 +36,7 @@ function Header({
           options={["none", "biking", "kayaking"]}
           id="activity-change-input"
           label="activity"
-          value={currentListOptions.currentActivityValue}
+          value={state.currentActivityValue}
           dispatch={dispatch}
         />
         <Select
@@ -42,7 +44,7 @@ function Header({
           options={["1", "2", "3", "4", "5", "6"]}
           id="number-of-people-input"
           label="Number of People"
-          value={currentListOptions.current}
+          value={state.current}
           dispatch={dispatch}
         />
         <Select
@@ -50,7 +52,7 @@ function Header({
           options={["1", "2", "3", "4", "5", "6", "7", "8", "9"]}
           id="number-of-nights-input"
           label="Number of Nights"
-          value={currentListOptions.duration}
+          value={state.duration}
           dispatch={dispatch}
         />
       </div>
