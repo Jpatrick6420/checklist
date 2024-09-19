@@ -1,13 +1,13 @@
 import { useState } from "react";
 import FormInput from "./FormInput";
+import { items } from "../data/itemData";
 
 function ItemCreateForm() {
-  let arr = [];
   const [newEntry, setNewEntry] = useState({
     id: 1,
     name: "",
-    coldMonths: false,
-    hotMonths: false,
+    cold: false,
+    hot: false,
     shoulderSeason: false,
     packed: false,
     quantity: 0,
@@ -26,9 +26,9 @@ function ItemCreateForm() {
         {
           setNewEntry((prevEntry) => ({
             ...prevEntry,
-            coldMonths: !value,
-            biking: !value ? false : prevEntry.biking,
-            kayaking: !value ? false : prevEntry.kayaking,
+            cold: !prevEntry.cold,
+            biking: !prevEntry.cold ? false : prevEntry.biking,
+            kayaking: !prevEntry.cold ? false : prevEntry.kayaking,
           }));
         }
         break;
@@ -36,9 +36,9 @@ function ItemCreateForm() {
         {
           setNewEntry((prevEntry) => ({
             ...prevEntry,
-            hotMonths: !value,
-            biking: !value ? false : prevEntry.biking,
-            kayaking: !value ? false : prevEntry.kayaking,
+            hot: !prevEntry.hot,
+            biking: !prevEntry.hot ? false : prevEntry.biking,
+            kayaking: !prevEntry.hot ? false : prevEntry.kayaking,
           }));
         }
         break;
@@ -46,17 +46,18 @@ function ItemCreateForm() {
         {
           setNewEntry((prevEntry) => ({
             ...prevEntry,
-            hotMonths: !value,
-            biking: !value ? false : prevEntry.biking,
-            kayaking: !value ? false : prevEntry.kayaking,
+            shoulderSeason: !prevEntry.shoulderSeason,
+            biking: !prevEntry.shoulderSeason ? false : prevEntry.biking,
+            kayaking: !prevEntry.shoulderSeason ? false : prevEntry.kayaking,
           }));
         }
         break;
       case "quantity":
         {
+          if (!value) return;
           setNewEntry({
             ...newEntry,
-            quantity: value,
+            quantity: Number(value),
           });
         }
         break;
@@ -65,8 +66,8 @@ function ItemCreateForm() {
           setNewEntry({
             ...newEntry,
             biking: true,
-            hotMonths: false,
-            coldMonths: false,
+            hot: false,
+            cold: false,
             shoulderSeason: false,
           });
         }
@@ -75,24 +76,28 @@ function ItemCreateForm() {
         setNewEntry({
           ...newEntry,
           kayaking: true,
-          hotMonths: false,
-          coldMonths: false,
+          hot: false,
+          cold: false,
           shoulderSeason: false,
         });
       }
     }
-    console.log(newEntry);
   };
   const handleSubmit = (e) => {
     e.preventDefault();
+    if (!newEntry.quantity) {
+      return alert("Put in quantity");
+    }
     setNewEntry((prev) => {
-      return { ...prev, id: arr.length };
+      return { ...prev, id: items.length + 1 };
     });
-    console.log(newEntry);
+    alert(JSON.stringify(newEntry));
   };
   return (
     <form className="bg-stone-200 rounded-lg px-6 py-4">
-      <h2 className="font-bold text-xl mb-6 underline ">New Item</h2>
+      <h2 className="font-bold text-xl mb-6 underline text-gray-900">
+        New Item
+      </h2>
       <FormInput
         label="Name"
         field="name"
@@ -103,21 +108,21 @@ function ItemCreateForm() {
       <FormInput
         label="Cold Months"
         field="cold months"
-        value={newEntry.coldMonths}
+        value={newEntry.cold}
         onChange={handleInputEntry}
         type="checkbox"
       />
       <FormInput
         label="Hot Months"
         field="hot months"
-        value={newEntry.hotMonths}
+        value={newEntry.hot}
         onChange={handleInputEntry}
         type="checkbox"
       />
       <FormInput
-        label="Shouldee Months"
+        label="Shoulder Months"
         field="shoulder months"
-        value={newEntry.coldMonths}
+        value={newEntry.shoulderSeason}
         onChange={handleInputEntry}
         type="checkbox"
       />
@@ -141,6 +146,7 @@ function ItemCreateForm() {
         value={newEntry.quantity.toString()}
         onChange={handleInputEntry}
         type="text"
+        className="text-gray-900"
       />
       <div className="flex justify-center items-center gap-2 mt-4">
         <button

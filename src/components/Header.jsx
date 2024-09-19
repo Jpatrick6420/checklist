@@ -17,7 +17,7 @@ function Header() {
   let activity =
     state.currentActivityValue === "none" ? "" : state.currentActivityValue;
   return (
-    <header className="bg-gradient-to-br dark:from-blue-400  px-2 pt-4">
+    <header className="bg-gradient-to-br from-blue-400 px-2 pt-4">
       <h1 className="mb-4 font-semibold text-gray-900 dark:text-stone-200">
         {state.currentWeatherValue.split("-").join(" ")}{" "}
         {activity === "" ? "" : "&"} {activity} list{activity === "" ? "" : "s"}
@@ -56,14 +56,14 @@ function Header() {
           value={state.duration}
           dispatch={dispatch}
         />
-        <div className="items-center flex">
+        {/* <div className="items-center flex">
           <Link
             to="/new-entry"
             className="w-6 h-6 ml-2 bg-blue-500 rounded-md text-stone-50 hover:scale-105 active:scale-100 hover:bg-blue-400 hover:text-stone-50"
           >
             +
           </Link>
-        </div>
+        </div> */}
       </div>
     </header>
   );
