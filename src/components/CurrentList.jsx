@@ -7,7 +7,7 @@ function CurrentList() {
   const { state, toggleChecked } = useContext(ItemsContext);
 
   return (
-    <ul className="checklist grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+    <ul className="checklist grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 pt-4">
       {Array.isArray(state.currentList) ? (
         state.currentList.map((item, idx) => {
           let amount;
