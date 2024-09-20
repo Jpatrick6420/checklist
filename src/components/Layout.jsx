@@ -21,6 +21,7 @@ function Layout() {
       dispatch,
     ]
   );
+
   return (
     <section className="grid min-h-[100dvh] grid-rows-[auto_1fr_auto]">
       <Header />

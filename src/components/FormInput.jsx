@@ -25,7 +25,6 @@ function FormInput({ label, type, value, field, onChange }) {
           value={value}
           onChange={(e) => {
             onChange(e.target.checked, field);
-            console.log(e.target.checked);
           }}
         />
       </div>

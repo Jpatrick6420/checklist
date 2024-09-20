@@ -1,10 +1,15 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import FormInput from "./FormInput";
 import { items } from "../data/itemData";
-
+import { useNavigate } from "react-router-dom";
+import { ItemsContext } from "../context/reducerContext";
+import { v4 as uuidv4 } from "uuid";
 function ItemCreateForm() {
+  const navigate = useNavigate();
+  const { state } = useContext(ItemsContext);
+  console.log(state);
   const [newEntry, setNewEntry] = useState({
-    id: 1,
+    id: uuidv4(),
     name: "",
     cold: false,
     hot: false,
@@ -88,10 +93,24 @@ function ItemCreateForm() {
     if (!newEntry.quantity) {
       return alert("Put in quantity");
     }
-    setNewEntry((prev) => {
-      return { ...prev, id: items.length + 1 };
-    });
-    alert(JSON.stringify(newEntry));
+
+    if (newEntry.hot) {
+      state.hotMonthsList.push(newEntry);
+    }
+    if (newEntry.cold) {
+      state.coldMonthsList.push(newEntry);
+    }
+    if (newEntry.shoulderSeason) {
+      state.shoulderList.push(newEntry);
+    }
+    if (newEntry.biking) {
+      state.bikingList.push(newEntry);
+    }
+    if (newEntry.kayaking) {
+      state.kayakingList.push(newEntry);
+    }
+
+    navigate("/");
   };
   return (
     <form className="bg-stone-200 rounded-lg px-6 py-4">

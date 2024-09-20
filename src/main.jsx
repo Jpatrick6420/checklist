@@ -8,7 +8,10 @@ import ItemCreateForm from "./components/ItemCreateForm.jsx";
 import { ItemsProvider } from "./context/reducerContext.jsx";
 
 const router = createBrowserRouter([
-  { path: "/", element: <Layout /> },
+  {
+    path: "/",
+    element: <Layout />,
+  },
   { path: "new-entry", element: <ItemCreateForm /> },
 ]);
 

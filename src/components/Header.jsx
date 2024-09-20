@@ -56,14 +56,14 @@ function Header() {
           value={state.duration}
           dispatch={dispatch}
         />
-        {/* <div className="items-center flex">
+        <div className="items-center flex">
           <Link
             to="/new-entry"
             className="w-6 h-6 ml-2 bg-blue-500 rounded-md text-stone-50 hover:scale-105 active:scale-100 hover:bg-blue-400 hover:text-stone-50"
           >
             +
           </Link>
-        </div> */}
+        </div>
       </div>
     </header>
   );
