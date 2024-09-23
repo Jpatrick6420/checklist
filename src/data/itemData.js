@@ -560,6 +560,17 @@ const items = [
     biking: false,
     kayaking: false,
   },
+  {
+    id: 54,
+    name: "fan",
+    coldMonths: false,
+    hotMonths: true,
+    shoulderSeason: true,
+    packed: false,
+    quantity: 1,
+    biking: false,
+    kayaking: false,
+  },
 ];
 
 export { items };

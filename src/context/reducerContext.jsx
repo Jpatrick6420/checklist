@@ -1,6 +1,6 @@
 import { createContext, useReducer } from "react";
 import { initialState } from "../utilities/utilities";
-import { handleActiveListChange } from "../data/listData";
+import { handleActiveListChange } from "../data/listData.jsx";
 /*eslint react/prop-types: 0 */
 const ItemsContext = createContext();
 function ItemsProvider({ children }) {
@@ -81,6 +81,41 @@ function ItemsProvider({ children }) {
       case "change duration": {
         return { ...state, duration: action.payload };
       }
+      case "add new item":
+        {
+          if (action.payload.hot) {
+            return {
+              ...state,
+              hotMonthsList: [...state.hotMonthsList, action.payload],
+            };
+          }
+          if (action.payload.cold) {
+            return {
+              ...state,
+              coldMonthsList: [...state.coldMonthsList, action.payload],
+            };
+          }
+          if (action.payload.shoulderSeason) {
+            return {
+              ...state,
+              shoulderList: [...state.shoulderList, action.payload],
+            };
+          }
+          if (action.payload.biking) {
+            return {
+              ...state,
+              bikingList: [...state.bikingList, action.payload],
+            };
+          }
+          if (action.payload.kayaking) {
+            return {
+              ...state,
+              kayakingList: [...state.kayakingList, action.payload],
+            };
+          }
+        }
+
+        break;
       default:
         console.log("Houstan we have a problem with the reducer💥");
         return state;

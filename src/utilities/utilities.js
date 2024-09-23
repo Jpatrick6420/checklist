@@ -4,7 +4,7 @@ import {
   shoulderSeasonList,
   bikingList,
   kayakingList,
-} from "../data/listData";
+} from "../data/listData.jsx";
 export const formatName = (name) => {
   const seperatedName = name.split("-");
   const formattedWords = seperatedName.map((name) => {

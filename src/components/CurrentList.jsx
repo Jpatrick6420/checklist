@@ -1,11 +1,17 @@
 /*eslint react/prop-types: 0 */
 import PropTypes from "prop-types";
-import { useContext } from "react";
+import { useContext, useEffect } from "react";
 import { ItemsContext } from "../context/reducerContext";
+import { handleActiveListChange } from "../data/listData";
 
 function CurrentList() {
   const { state, toggleChecked } = useContext(ItemsContext);
-
+  useEffect(
+    function () {
+      handleActiveListChange(state);
+    },
+    [state]
+  );
   return (
     <ul className="checklist grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 pt-4">
       {Array.isArray(state.currentList) ? (
