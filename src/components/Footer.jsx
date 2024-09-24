@@ -7,6 +7,7 @@ function Footer() {
   const [numPackedItems, setNumPackedItems] = useState(0);
   const [itemsLeftToPack, setItemsLeftToPack] = useState(0);
   const calculatePackedItems = () => {
+    console.log(state.currentList);
     const itemsPacked = state.currentList.reduce((acc, item) => {
       return item.packed ? acc + 1 : acc;
     }, 0);

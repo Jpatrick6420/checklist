@@ -5,12 +5,20 @@ import { ItemsContext } from "../context/reducerContext";
 import { handleActiveListChange } from "../data/listData";
 
 function CurrentList() {
-  const { state, toggleChecked } = useContext(ItemsContext);
+  const { state, toggleChecked, dispatch } = useContext(ItemsContext);
   useEffect(
     function () {
-      handleActiveListChange(state);
+      // state.currentList = handleActiveListChange(state);
+      const newList = handleActiveListChange(state);
+      dispatch({ type: "handle active change list", payload: newList });
     },
-    [state]
+    [
+      state.hotList,
+      state.coldList,
+      state.shoulderList,
+      state.biking,
+      state.kayaking,
+    ]
   );
   return (
     <ul className="checklist grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 pt-4">

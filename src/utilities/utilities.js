@@ -26,7 +26,7 @@ export const initialState = {
   kayaking: false,
   numOfPeople: "1",
   duration: "1",
-  currentList: [...hotMonthsList, ...bikingList],
+  currentList: [...hotMonthsList],
   currentWeatherValue: "hot-months",
   currentActivityValue: "none",
   hotMonthsList: hotMonthsList,

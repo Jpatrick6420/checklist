@@ -30,7 +30,7 @@ export const handleActiveListChange = (state) => {
     state.biking === false &&
     state.kayaking === false
   ) {
-    return state.shoulderSeasonList;
+    return state.shoulderList;
   }
   if (state.hot === true && state.biking === true) {
     const combinedList = [...state.hotMonthsList, ...state.bikingList];
@@ -49,11 +49,11 @@ export const handleActiveListChange = (state) => {
     return combinedList;
   }
   if (state.shoulderSeason === true && state.biking === true) {
-    const combinedList = [...state.shoulderSeasonList, ...state.bikingList];
+    const combinedList = [...state.shoulderList, ...state.bikingList];
     return combinedList;
   }
   if (state.shoulderSeason === true && state.kayaking === true) {
-    const combinedList = [...state.shoulderSeasonList, ...state.kayakingList];
+    const combinedList = [...state.shoulderList, ...state.kayakingList];
     return combinedList;
   }
 };
