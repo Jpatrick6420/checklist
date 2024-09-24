@@ -14,7 +14,7 @@ function ItemCreateForm() {
     hot: false,
     shoulderSeason: false,
     packed: false,
-    quantity: 0,
+    quantity: 1,
     biking: false,
     kayaking: false,
   });
@@ -93,94 +93,81 @@ function ItemCreateForm() {
       return alert("Put in quantity");
     }
     dispatch({ type: "add new item", payload: newEntry });
-    // if (newEntry.hot) {
-    //   state.hotMonthsList.push(newEntry);
-    // }
-    // if (newEntry.cold) {
-    //   state.coldMonthsList.push(newEntry);
-    // }
-    // if (newEntry.shoulderSeason) {
-    //   state.shoulderList.push(newEntry);
-    // }
-    // if (newEntry.biking) {
-    //   state.bikingList.push(newEntry);
-    // }
-    // if (newEntry.kayaking) {
-    //   state.kayakingList.push(newEntry);
-    // }
 
     navigate("/");
   };
   return (
-    <form className="bg-stone-200 rounded-lg px-6 py-4">
-      <h2 className="font-bold text-xl mb-6 underline text-gray-900">
-        New Item
-      </h2>
-      <FormInput
-        label="Name"
-        field="name"
-        value={newEntry.name}
-        onChange={handleInputEntry}
-        type="text"
-      />
-      <FormInput
-        label="Cold Months"
-        field="cold months"
-        value={newEntry.cold}
-        onChange={handleInputEntry}
-        type="checkbox"
-      />
-      <FormInput
-        label="Hot Months"
-        field="hot months"
-        value={newEntry.hot}
-        onChange={handleInputEntry}
-        type="checkbox"
-      />
-      <FormInput
-        label="Shoulder Months"
-        field="shoulder months"
-        value={newEntry.shoulderSeason}
-        onChange={handleInputEntry}
-        type="checkbox"
-      />
-      <FormInput
-        label="Biking"
-        field="biking"
-        value={newEntry.biking}
-        onChange={handleInputEntry}
-        type="checkbox"
-      />
-      <FormInput
-        label="Kayaking"
-        field="kayaking"
-        value={newEntry.kayaking}
-        onChange={handleInputEntry}
-        type="checkbox"
-      />
-      <FormInput
-        label="Quantity"
-        field="quantity"
-        value={newEntry.quantity.toString()}
-        onChange={handleInputEntry}
-        type="text"
-        className="text-gray-900"
-      />
-      <div className="flex justify-center items-center gap-2 mt-4">
-        <button
-          onClick={handleSubmit}
-          className="w-1/3 bg-blue-500 hover:bg-blue-400 hover:scale-105 active:scale-100 text-sm text-stone-50"
-        >
-          Submit
-        </button>
-        <button
-          className="w-1/3 bg-red-500 hover:bg-red-400 hover:scale-105 active:scale-100 text-sm text-stone-50"
-          onClick={() => document.querySelector("form").reset()}
-        >
-          Reset
-        </button>
-      </div>
-    </form>
+    <div className="flex justify-center">
+      <form className="bg-stone-200 rounded-lg px-6 py-4 max-w-[500px] ">
+        <h2 className="font-bold text-xl mb-6 underline text-gray-900">
+          New Item
+        </h2>
+        <FormInput
+          label="Name"
+          field="name"
+          value={newEntry.name}
+          onChange={handleInputEntry}
+          type="text"
+        />
+        <FormInput
+          label="Cold Months"
+          field="cold months"
+          value={newEntry.cold}
+          onChange={handleInputEntry}
+          type="checkbox"
+        />
+        <FormInput
+          label="Hot Months"
+          field="hot months"
+          value={newEntry.hot}
+          onChange={handleInputEntry}
+          type="checkbox"
+        />
+        <FormInput
+          label="Shoulder Months"
+          field="shoulder months"
+          value={newEntry.shoulderSeason}
+          onChange={handleInputEntry}
+          type="checkbox"
+        />
+        <FormInput
+          label="Biking"
+          field="biking"
+          value={newEntry.biking}
+          onChange={handleInputEntry}
+          type="checkbox"
+        />
+        <FormInput
+          label="Kayaking"
+          field="kayaking"
+          value={newEntry.kayaking}
+          onChange={handleInputEntry}
+          type="checkbox"
+        />
+        <FormInput
+          label="Quantity"
+          field="quantity"
+          value={newEntry.quantity.toString()}
+          onChange={handleInputEntry}
+          type="text"
+          className="text-gray-900"
+        />
+        <div className="flex justify-center items-center gap-2 mt-4">
+          <button
+            onClick={handleSubmit}
+            className="w-1/3 bg-blue-500 hover:bg-blue-400 hover:scale-105 active:scale-100 text-sm text-stone-50"
+          >
+            Submit
+          </button>
+          <button
+            className="w-1/3 bg-red-500 hover:bg-red-400 hover:scale-105 active:scale-100 text-sm text-stone-50"
+            onClick={() => document.querySelector("form").reset()}
+          >
+            Reset
+          </button>
+        </div>
+      </form>
+    </div>
   );
 }
 

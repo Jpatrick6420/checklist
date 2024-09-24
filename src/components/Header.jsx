@@ -1,29 +1,22 @@
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 import { ItemsContext } from "../context/reducerContext";
-import Select from "./Select";
 import { useContext } from "react";
+import Nav from "./Nav";
 /*eslint react/prop-types: 0 */
 
 function Header() {
-  const {
-    handleActivityChange,
-    handleNumOfPeopleChange,
-    handleDurationChange,
-    dispatch,
-    handleWeatherChange,
-    state,
-  } = useContext(ItemsContext);
+  const { state } = useContext(ItemsContext);
 
   let activity =
     state.currentActivityValue === "none" ? "" : state.currentActivityValue;
   return (
-    <header className="bg-gradient-to-br from-blue-400 px-2 py-6">
+    <header className="bg-gradient-to-br from-blue-400 px-2 sm:px-4 py-6">
       <h1 className="mb-4 font-semibold text-gray-900 dark:text-stone-200">
         {state.currentWeatherValue.split("-").join(" ")}{" "}
         {activity === "" ? "" : "&"} {activity} list{activity === "" ? "" : "s"}
       </h1>
 
-      <div className="input-container grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 ">
+      {/* <div className="input-container grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 ">
         <Select
           onChange={handleWeatherChange}
           options={["hot-months", "cold-months", "shoulder-season"]}
@@ -64,7 +57,8 @@ function Header() {
             +
           </Link>
         </div>
-      </div>
+      </div> */}
+      <Nav />
     </header>
   );
 }

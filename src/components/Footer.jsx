@@ -7,7 +7,6 @@ function Footer() {
   const [numPackedItems, setNumPackedItems] = useState(0);
   const [itemsLeftToPack, setItemsLeftToPack] = useState(0);
   const calculatePackedItems = () => {
-    console.log(state.currentList);
     const itemsPacked = state.currentList.reduce((acc, item) => {
       return item.packed ? acc + 1 : acc;
     }, 0);
@@ -29,13 +28,13 @@ function Footer() {
   );
 
   return (
-    <footer>
-      <ul className="flex justify-around border-t-2 border-gray-900 mt-4 pt-4">
+    <footer className="bg-gray-900">
+      <ul className="flex justify-around border-t-2 border-stone-50  py-4">
         <li>
           <p className="text-yellow-500">Items Packed: {numPackedItems}</p>
         </li>
         <li>
-          <p>Items left: {itemsLeftToPack}</p>
+          <p className="text-stone-50">Items left: {itemsLeftToPack}</p>
         </li>
       </ul>
     </footer>

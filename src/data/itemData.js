@@ -571,6 +571,17 @@ const items = [
     biking: false,
     kayaking: false,
   },
+  {
+    id: 55,
+    name: "bike pump",
+    coldMonths: false,
+    hotMonths: false,
+    shoulderSeason: false,
+    packed: false,
+    quantity: 1,
+    biking: true,
+    kayaking: false,
+  },
 ];
 
 export { items };

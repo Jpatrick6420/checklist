@@ -21,7 +21,7 @@ function CurrentList() {
     ]
   );
   return (
-    <ul className="checklist grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 pt-4">
+    <ul className="checklist grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 pt-2 sm:pt-4">
       {Array.isArray(state.currentList) ? (
         state.currentList.map((item, idx) => {
           let amount;
