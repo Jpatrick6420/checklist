@@ -3,8 +3,8 @@ import FormInput from "./FormInput";
 import { useNavigate } from "react-router-dom";
 import { ItemsContext } from "../context/reducerContext";
 import { v4 as uuidv4 } from "uuid";
+import Button from "./Button";
 function ItemCreateForm() {
-  const navigate = useNavigate();
   const { dispatch } = useContext(ItemsContext);
 
   const [newEntry, setNewEntry] = useState({
@@ -18,6 +18,7 @@ function ItemCreateForm() {
     biking: false,
     kayaking: false,
   });
+  const navigate = useNavigate();
 
   const handleInputEntry = (value, field) => {
     switch (field) {
@@ -96,9 +97,17 @@ function ItemCreateForm() {
 
     navigate("/");
   };
+  const handleReset = () => {
+    document.querySelector("form").reset();
+  };
+  const handleNavigateHome = (e) => {
+    e.preventDefault();
+    navigate("/");
+  };
   return (
     <div className="flex justify-center">
-      <form className="bg-stone-200 rounded-lg px-6 py-4 max-w-[500px] ">
+      <form className="relative bg-stone-200 rounded-lg px-6 py-4 max-w-[500px] ">
+        <Button type="close-btn" onClick={handleNavigateHome} label="X" />
         <h2 className="font-bold text-xl mb-6 underline text-gray-900">
           New Item
         </h2>
@@ -152,19 +161,10 @@ function ItemCreateForm() {
           type="text"
           className="text-gray-900"
         />
-        <div className="flex justify-center items-center gap-2 mt-4">
-          <button
-            onClick={handleSubmit}
-            className="w-1/3 bg-blue-500 hover:bg-blue-400 hover:scale-105 active:scale-100 text-sm text-stone-50"
-          >
-            Submit
-          </button>
-          <button
-            className="w-1/3 bg-red-500 hover:bg-red-400 hover:scale-105 active:scale-100 text-sm text-stone-50"
-            onClick={() => document.querySelector("form").reset()}
-          >
-            Reset
-          </button>
+        <div className="flex justify-center items-center gap-2 mt-4 ">
+          <Button type="submit" onClick={handleSubmit} label="Submit" />
+
+          <Button type="negative" onClick={handleReset} label="Reset" />
         </div>
       </form>
     </div>
