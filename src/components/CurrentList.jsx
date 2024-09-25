@@ -37,7 +37,7 @@ function CurrentList() {
             );
           }
           if (item.quantity === 1 && item.name !== "water") {
-            amount = 1;
+            amount = null;
           }
           if (
             item.name === "bike water bottles" ||
