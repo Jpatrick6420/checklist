@@ -3,6 +3,7 @@ import PropTypes from "prop-types";
 import { useContext, useEffect } from "react";
 import { ItemsContext } from "../context/reducerContext";
 import { handleActiveListChange } from "../data/listData";
+import { capitalizeName } from "../utilities/utilities";
 
 function CurrentList() {
   const { state, toggleChecked, dispatch } = useContext(ItemsContext);
@@ -60,7 +61,8 @@ function CurrentList() {
               className=" flex items-center justify-between hover:bg-blue-600 hover:text-stone-50 rounded-md py-2 px-4"
             >
               <p className={itemStyles}>
-                {amount} {item.name === "water" ? "Gal" : ""} {item.name}
+                {amount} {item.name === "water" ? "Gal" : ""}{" "}
+                {capitalizeName(item.name)}
               </p>
               <input
                 type="checkbox"

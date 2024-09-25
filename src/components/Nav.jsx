@@ -22,10 +22,10 @@ function Nav() {
       <Button type="primary" label="Menu" onClick={toggleNavOpen} />
 
       <ul
-        className={`transition-transform  duration-500 ease-in-out transform origin-top ${
-          navOpen ? "scale-y-100 opacity-100" : "scale-y-0 opacity-0"
-        } `}
-        style={{ transformOrigin: "top", height: navOpen ? "auto" : "0" }}
+        className={` transition-all ${
+          navOpen ? "max-h-screen opacity-100" : "max-h-0 opacity-0"
+        } duration-700 ease-in-out overflow-hidden`}
+        style={{ maxHeight: navOpen ? "500px" : "0" }}
       >
         <li>
           {" "}
@@ -43,7 +43,7 @@ function Nav() {
             onChange={handleActivityChange}
             options={["none", "biking", "kayaking"]}
             id="activity-change-input"
-            label="activity"
+            label="Activity"
             value={state.currentActivityValue}
             dispatch={dispatch}
           />

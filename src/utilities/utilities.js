@@ -35,3 +35,22 @@ export const initialState = {
   bikingList,
   kayakingList,
 };
+
+export const capitalizeName = (name) => {
+  const split = name.split(" ");
+
+  if (split.length === 1) {
+    const firstLetter = split[0][0].toUpperCase();
+    const restOfName = split[0].slice(1);
+    return firstLetter + restOfName;
+  }
+
+  const capitalizedElements = split.map((word) => {
+    const firstLetter = word[0].toUpperCase();
+    const restOfName = word.slice(1);
+
+    return firstLetter + restOfName;
+  });
+
+  return capitalizedElements.join(" ");
+};
