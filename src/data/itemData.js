@@ -364,7 +364,7 @@ const items = [
   },
   {
     id: 36,
-    name: "car chair",
+    name: "camp chair",
     coldMonths: true,
     hotMonths: true,
     shoulderSeason: true,
@@ -649,6 +649,18 @@ const items = [
     biking: false,
     kayaking: false,
     dispersedCamping: true,
+  },
+  {
+    id: 62,
+    name: "charge fan",
+    coldMonths: true,
+    hotMonths: true,
+    shoulderSeason: true,
+    packed: false,
+    quantity: 1,
+    biking: false,
+    kayaking: false,
+    dispersedCamping: false,
   },
 ];
 
