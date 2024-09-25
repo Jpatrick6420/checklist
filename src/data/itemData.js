@@ -551,7 +551,7 @@ const items = [
   },
   {
     id: 53,
-    name: "sleeping bag pump",
+    name: "sleeping pad pump",
     coldMonths: true,
     hotMonths: true,
     shoulderSeason: true,

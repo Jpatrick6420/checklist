@@ -9,7 +9,6 @@ function CurrentList() {
   const { state, toggleChecked, dispatch } = useContext(ItemsContext);
   useEffect(
     function () {
-      // state.currentList = handleActiveListChange(state);
       const newList = handleActiveListChange(state);
       dispatch({ type: "handle active change list", payload: newList });
     },
