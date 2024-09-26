@@ -63,7 +63,7 @@ function Nav() {
             onChange={handleDurationChange}
             options={["1", "2", "3", "4", "5", "6", "7", "8", "9"]}
             id="number-of-nights-input"
-            label="Number of Nights"
+            label="Number of Days"
             value={state.duration}
             dispatch={dispatch}
           />

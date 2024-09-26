@@ -14,7 +14,7 @@ function ItemCreateForm() {
     hot: false,
     shoulderSeason: false,
     packed: false,
-    quantity: 1,
+    quantity: null,
     biking: false,
     kayaking: false,
   });
@@ -90,9 +90,9 @@ function ItemCreateForm() {
   };
   const handleSubmit = (e) => {
     e.preventDefault();
-    if (!newEntry.quantity) {
-      return alert("Put in quantity");
-    }
+    // if (!newEntry.quantity) {
+    //   return alert("Put in qua
+    // }
     dispatch({ type: "add new item", payload: newEntry });
 
     navigate("/");

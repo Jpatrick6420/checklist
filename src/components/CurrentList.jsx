@@ -27,7 +27,7 @@ function CurrentList() {
           let amount;
 
           if (
-            item.quantity > 1 &&
+            item.quantity !== 1 &&
             item.name !== "water" &&
             item.name !== "bike water bottles"
           ) {
@@ -35,8 +35,11 @@ function CurrentList() {
               item.quantity * state.duration * (state.clothingMultiplier || 1)
             );
           }
-          if (item.quantity === 1 && item.name !== "water") {
-            amount = null;
+          if (
+            (item.quantity === 1 && item.name !== "water") ||
+            item.quantity === null
+          ) {
+            amount = "";
           }
           if (
             item.name === "bike water bottles" ||
