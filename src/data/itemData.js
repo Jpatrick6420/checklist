@@ -9,6 +9,8 @@ const items = [
     quantity: 1.1,
     biking: false,
     kayaking: false,
+    dispersed: false,
+    dog: false,
   },
   {
     id: 2,
@@ -20,6 +22,8 @@ const items = [
     quantity: 0.4,
     biking: false,
     kayaking: false,
+    dispersed: false,
+    dog: false,
   },
   {
     id: 3,
@@ -31,6 +35,8 @@ const items = [
     quantity: 0.8,
     biking: false,
     kayaking: false,
+    dispersed: false,
+    dog: false,
   },
   {
     id: 4,
@@ -42,6 +48,8 @@ const items = [
     quantity: 1.3,
     biking: false,
     kayaking: false,
+    dispersed: false,
+    dog: false,
   },
   {
     id: 5,
@@ -53,6 +61,8 @@ const items = [
     quantity: 0.4,
     biking: false,
     kayaking: false,
+    dispersed: false,
+    dog: false,
   },
   {
     id: 6,
@@ -64,6 +74,8 @@ const items = [
     quantity: 1.3,
     biking: false,
     kayaking: false,
+    dispersed: false,
+    dog: false,
   },
   {
     id: 7,
@@ -75,6 +87,8 @@ const items = [
     quantity: 1,
     biking: false,
     kayaking: false,
+    dispersed: false,
+    dog: false,
   },
   {
     id: 8,
@@ -86,6 +100,8 @@ const items = [
     quantity: 1,
     biking: false,
     kayaking: false,
+    dispersed: false,
+    dog: false,
   },
   {
     id: 9,
@@ -97,6 +113,8 @@ const items = [
     quantity: 1,
     biking: false,
     kayaking: false,
+    dispersed: false,
+    dog: false,
   },
   {
     id: 10,
@@ -108,6 +126,8 @@ const items = [
     quantity: 1,
     biking: false,
     kayaking: false,
+    dispersed: false,
+    dog: false,
   },
   {
     id: 11,
@@ -119,6 +139,8 @@ const items = [
     quantity: 1,
     biking: false,
     kayaking: false,
+    dispersed: false,
+    dog: false,
   },
   {
     id: 12,
@@ -130,6 +152,8 @@ const items = [
     quantity: 1,
     biking: false,
     kayaking: false,
+    dispersed: false,
+    dog: false,
   },
   {
     id: 13,
@@ -141,6 +165,8 @@ const items = [
     quantity: 1,
     biking: false,
     kayaking: false,
+    dispersed: false,
+    dog: false,
   },
   {
     id: 14,
@@ -152,6 +178,8 @@ const items = [
     quantity: 1,
     biking: false,
     kayaking: false,
+    dispersed: false,
+    dog: false,
   },
   {
     id: 15,
@@ -163,6 +191,8 @@ const items = [
     quantity: 1,
     biking: false,
     kayaking: false,
+    dispersed: false,
+    dog: false,
   },
   {
     id: 18,
@@ -174,6 +204,8 @@ const items = [
     quantity: 1,
     biking: false,
     kayaking: true,
+    dispersed: false,
+    dog: false,
   },
   {
     id: 19,
@@ -185,6 +217,8 @@ const items = [
     quantity: 1,
     biking: false,
     kayaking: false,
+    dispersed: false,
+    dog: false,
   },
   {
     id: 20,
@@ -196,6 +230,8 @@ const items = [
     quantity: 1,
     biking: false,
     kayaking: false,
+    dispersed: false,
+    dog: false,
   },
   {
     id: 21,
@@ -207,6 +243,8 @@ const items = [
     quantity: 1,
     biking: true,
     kayaking: false,
+    dispersed: false,
+    dog: false,
   },
   {
     id: 22,
@@ -218,6 +256,8 @@ const items = [
     quantity: 2,
     biking: false,
     kayaking: false,
+    dispersed: false,
+    dog: false,
   },
   {
     id: 23,
@@ -229,6 +269,8 @@ const items = [
     quantity: 2,
     biking: false,
     kayaking: true,
+    dispersed: false,
+    dog: false,
   },
   {
     id: 24,
@@ -240,6 +282,8 @@ const items = [
     quantity: 2,
     biking: false,
     kayaking: true,
+    dispersed: false,
+    dog: false,
   },
   {
     id: 25,
@@ -251,6 +295,8 @@ const items = [
     quantity: 1,
     biking: false,
     kayaking: false,
+    dispersed: false,
+    dog: false,
   },
   {
     id: 26,
@@ -262,6 +308,8 @@ const items = [
     quantity: 1,
     biking: false,
     kayaking: false,
+    dispersed: false,
+    dog: false,
   },
   {
     id: 27,
@@ -273,6 +321,8 @@ const items = [
     quantity: 1,
     biking: true,
     kayaking: false,
+    dispersed: false,
+    dog: false,
   },
   {
     id: 28,
@@ -284,6 +334,8 @@ const items = [
     quantity: 1,
     biking: true,
     kayaking: false,
+    dispersed: false,
+    dog: false,
   },
   {
     id: 29,
@@ -295,6 +347,8 @@ const items = [
     quantity: 1,
     biking: true,
     kayaking: false,
+    dispersed: false,
+    dog: false,
   },
   {
     id: 30,
@@ -306,6 +360,8 @@ const items = [
     quantity: 1,
     biking: false,
     kayaking: false,
+    dispersed: false,
+    dog: false,
   },
   {
     id: 31,
@@ -317,6 +373,8 @@ const items = [
     quantity: 2,
     biking: true,
     kayaking: false,
+    dispersed: false,
+    dog: false,
   },
   {
     id: 32,
@@ -328,6 +386,8 @@ const items = [
     quantity: 1,
     biking: false,
     kayaking: false,
+    dispersed: false,
+    dog: false,
   },
   {
     id: 33,
@@ -339,6 +399,8 @@ const items = [
     quantity: 0.2,
     biking: false,
     kayaking: false,
+    dispersed: false,
+    dog: false,
   },
   {
     id: 34,
@@ -350,6 +412,8 @@ const items = [
     quantity: 1,
     biking: false,
     kayaking: true,
+    dispersed: false,
+    dog: false,
   },
   {
     id: 35,
@@ -361,6 +425,8 @@ const items = [
     quantity: 1,
     biking: false,
     kayaking: false,
+    dispersed: false,
+    dog: false,
   },
   {
     id: 36,
@@ -372,6 +438,8 @@ const items = [
     quantity: 1,
     biking: false,
     kayaking: false,
+    dispersed: false,
+    dog: false,
   },
   {
     id: 37,
@@ -383,6 +451,8 @@ const items = [
     quantity: 1,
     biking: false,
     kayaking: false,
+    dispersed: false,
+    dog: false,
   },
   {
     id: 38,
@@ -394,6 +464,8 @@ const items = [
     quantity: 1,
     biking: false,
     kayaking: false,
+    dispersed: false,
+    dog: false,
   },
   {
     id: 39,
@@ -405,6 +477,8 @@ const items = [
     quantity: 1.6,
     biking: false,
     kayaking: false,
+    dispersed: false,
+    dog: false,
   },
   {
     id: 40,
@@ -416,6 +490,8 @@ const items = [
     quantity: 0.5,
     biking: false,
     kayaking: false,
+    dispersed: false,
+    dog: false,
   },
   {
     id: 41,
@@ -427,6 +503,8 @@ const items = [
     quantity: 0.9,
     biking: false,
     kayaking: false,
+    dispersed: false,
+    dog: false,
   },
   {
     id: 42,
@@ -438,6 +516,8 @@ const items = [
     quantity: 1,
     biking: false,
     kayaking: false,
+    dispersed: false,
+    dog: false,
   },
   {
     id: 43,
@@ -449,6 +529,8 @@ const items = [
     quantity: 1,
     biking: false,
     kayaking: false,
+    dispersed: false,
+    dog: false,
   },
   {
     id: 44,
@@ -460,6 +542,8 @@ const items = [
     quantity: 1,
     biking: false,
     kayaking: false,
+    dispersed: false,
+    dog: false,
   },
   {
     id: 45,
@@ -471,6 +555,8 @@ const items = [
     quantity: 0.3,
     biking: false,
     kayaking: false,
+    dispersed: false,
+    dog: false,
   },
   {
     id: 46,
@@ -482,6 +568,8 @@ const items = [
     quantity: 1,
     biking: false,
     kayaking: false,
+    dispersed: false,
+    dog: false,
   },
   {
     id: 47,
@@ -493,6 +581,8 @@ const items = [
     quantity: 1,
     biking: false,
     kayaking: false,
+    dispersed: false,
+    dog: false,
   },
   {
     id: 48,
@@ -504,6 +594,8 @@ const items = [
     quantity: 1,
     biking: false,
     kayaking: false,
+    dispersed: false,
+    dog: false,
   },
   {
     id: 49,
@@ -515,6 +607,8 @@ const items = [
     quantity: 1,
     biking: false,
     kayaking: false,
+    dispersed: false,
+    dog: false,
   },
   {
     id: 50,
@@ -526,6 +620,8 @@ const items = [
     quantity: 1,
     biking: false,
     kayaking: false,
+    dispersed: false,
+    dog: false,
   },
   {
     id: 51,
@@ -537,7 +633,8 @@ const items = [
     quantity: 1,
     biking: false,
     kayaking: false,
-    dispersedCamping: false,
+    dispersed: false,
+    dog: false,
   },
   {
     id: 52,
@@ -549,6 +646,8 @@ const items = [
     quantity: 1,
     biking: false,
     kayaking: false,
+    dispersed: false,
+    dog: false,
   },
   {
     id: 53,
@@ -560,6 +659,8 @@ const items = [
     quantity: 1,
     biking: false,
     kayaking: false,
+    dispersed: false,
+    dog: false,
   },
   {
     id: 54,
@@ -571,6 +672,8 @@ const items = [
     quantity: 1,
     biking: false,
     kayaking: false,
+    dispersed: false,
+    dog: false,
   },
   {
     id: 55,
@@ -582,6 +685,8 @@ const items = [
     quantity: 1,
     biking: true,
     kayaking: false,
+    dispersed: false,
+    dog: false,
   },
   {
     id: 56,
@@ -593,6 +698,8 @@ const items = [
     quantity: null,
     biking: false,
     kayaking: false,
+    dispersed: false,
+    dog: false,
   },
   {
     id: 57,
@@ -604,6 +711,8 @@ const items = [
     quantity: null,
     biking: false,
     kayaking: false,
+    dispersed: false,
+    dog: false,
   },
   {
     id: 58,
@@ -615,6 +724,8 @@ const items = [
     quantity: null,
     biking: false,
     kayaking: false,
+    dispersed: false,
+    dog: false,
   },
   {
     id: 59,
@@ -626,6 +737,8 @@ const items = [
     quantity: null,
     biking: false,
     kayaking: false,
+    dispersed: false,
+    dog: false,
   },
   {
     id: 60,
@@ -637,7 +750,8 @@ const items = [
     quantity: 1.8,
     biking: false,
     kayaking: false,
-    dispersedCamping: true,
+    dispersed: true,
+    dog: false,
   },
   {
     id: 61,
@@ -649,7 +763,8 @@ const items = [
     quantity: null,
     biking: false,
     kayaking: false,
-    dispersedCamping: true,
+    dispersed: true,
+    dog: false,
   },
   {
     id: 62,
@@ -661,7 +776,8 @@ const items = [
     quantity: 1,
     biking: false,
     kayaking: false,
-    dispersedCamping: false,
+    dispersed: false,
+    dog: false,
   },
   {
     id: 63,
@@ -673,7 +789,8 @@ const items = [
     quantity: 1,
     biking: false,
     kayaking: false,
-    dispersedCamping: false,
+    dispersed: false,
+    dog: false,
   },
   {
     id: 64,
@@ -685,7 +802,21 @@ const items = [
     quantity: 1,
     biking: false,
     kayaking: false,
-    dispersedCamping: false,
+    dispersed: false,
+    dog: false,
+  },
+  {
+    id: 65,
+    name: "portable shower",
+    coldMonths: false,
+    hotMonths: false,
+    shoulderSeason: false,
+    packed: false,
+    quantity: 1,
+    biking: false,
+    kayaking: false,
+    dispersed: true,
+    dog: false,
   },
 ];
 
