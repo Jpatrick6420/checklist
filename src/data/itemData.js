@@ -508,7 +508,7 @@ const items = [
   },
   {
     id: 42,
-    name: "garman",
+    name: "garmin",
     coldMonths: true,
     hotMonths: true,
     shoulderSeason: true,

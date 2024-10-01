@@ -14,7 +14,7 @@ function ItemCreateForm() {
     hot: false,
     shoulderSeason: false,
     packed: false,
-    quantity: null,
+    quantity: 1,
     biking: false,
     kayaking: false,
   });
@@ -156,7 +156,7 @@ function ItemCreateForm() {
         <FormInput
           label="Quantity"
           field="quantity"
-          value={newEntry.quantity.toString()}
+          value={newEntry?.quantity.toString()}
           onChange={handleInputEntry}
           type="text"
           className="text-gray-900"
